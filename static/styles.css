@@ -1,0 +1,32 @@
+/* static/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(16, 108, 161);
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+}

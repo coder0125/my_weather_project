@@ -1,0 +1,32 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Monitoring</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Daily Weather Summary</h1>
+    <table>
+        <tr>
+            <th>City</th>
+            <th>Average Temp (°C)</th>
+            <th>Max Temp (°C)</th>
+            <th>Min Temp (°C)</th>
+            <th>Condition</th>
+        </tr>
+        {% for summary in summaries %}
+        <tr>
+            <td>{{ summary[0] }}</td>
+            <td>{{ summary[1] | round(2) }}</td>
+            <td>{{ summary[2] | round(2) }}</td>
+            <td>{{ summary[3] | round(2) }}</td>
+            <td>{{ summary[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/alerts">Check Alerts</a>
+</body>
+</html>
